@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'active_job'
+require 'datadog/statsd'
+require 'resque'
 require_relative "datadog/version"
 
 module Resque
