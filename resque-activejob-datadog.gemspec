@@ -33,6 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'dogstatsd-ruby'
   spec.add_dependency 'resque'
   spec.add_dependency 'activejob'
+  spec.add_development_dependency 'debug'
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
