@@ -6,6 +6,7 @@ require "rails"
 module Resque
   module ActiveJob
     module Datadog
+      # Railtie to autoload the rake tasks
       class Railtie < Rails::Railtie
         railtie_name :resque_activejob_datadog
 

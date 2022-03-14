@@ -3,6 +3,7 @@
 module Resque
   module ActiveJob
     module Datadog
+      # Concern that wraps performs with benchmarking, then reports to Dogstatsd
       module BenchmarkStats
         extend ActiveSupport::Concern
 

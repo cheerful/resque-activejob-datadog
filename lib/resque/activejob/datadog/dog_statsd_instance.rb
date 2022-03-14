@@ -3,6 +3,7 @@
 module Resque
   module ActiveJob
     module Datadog
+      # The per-thread shared instance of `Datadog::Statsd`
       class DogStatsdInstance
         THREAD_VARIABLE = "__resque_activejob_datadog_dog_statsd_instance"
 

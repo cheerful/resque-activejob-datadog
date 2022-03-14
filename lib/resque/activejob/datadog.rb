@@ -10,6 +10,7 @@ require_relative "datadog/benchmark_stats"
 
 module Resque
   module ActiveJob
+    # Base module
     module Datadog
       class Error < StandardError; end
 

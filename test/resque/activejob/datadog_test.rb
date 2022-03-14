@@ -12,13 +12,13 @@ module Resque
       class TestJob < ::ActiveJob::Base
         include Resque::ActiveJob::Datadog::BenchmarkStats
 
-        def perform(n:)
-          n + 1
+        def perform(number:)
+          number + 1
         end
       end
 
       def test_perform_job
-        TestJob.perform_now(n: 1)
+        TestJob.perform_now(number: 1)
       end
     end
   end
