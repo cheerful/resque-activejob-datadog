@@ -14,8 +14,8 @@ module Resque
           DogStatsdInstance.instance
         end
 
-        def benchmark_stats
-          benchmark = Benchmark.ms { yield }
+        def benchmark_stats(&block)
+          benchmark = Benchmark.ms(&block)
           dogstatsd_client.timing("activejob.#{queue_name}.processed", benchmark)
           dogstatsd_client.timing("activejob.#{self.class}.processed", benchmark)
         end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'bundler'
+require "bundler"
 Bundler.require(:default, :test, :development)
 
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
