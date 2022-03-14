@@ -3,7 +3,7 @@
 require_relative "datadog/version"
 
 module Resque
-  module Activejob
+  module ActiveJob
     module Datadog
       class Error < StandardError; end
       # Your code goes here...

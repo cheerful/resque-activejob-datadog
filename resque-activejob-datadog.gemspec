@@ -4,12 +4,12 @@ require_relative "lib/resque/activejob/datadog/version"
 
 Gem::Specification.new do |spec|
   spec.name = "resque-activejob-datadog"
-  spec.version = Resque::Activejob::Datadog::VERSION
+  spec.version = Resque::ActiveJob::Datadog::VERSION
   spec.authors = ["Thomas Cannon"]
   spec.email = ["tcannon00@gmail.com"]
 
-  spec.summary = "Resque + Activejob integration for datadog statsd"
-  spec.description = "Resque + Activejob integration for datadog statsd"
+  spec.summary = "Resque + ActiveJob integration for datadog statsd"
+  spec.description = "Resque + ActiveJob integration for datadog statsd"
   spec.homepage = "https://github.com/cheerful/resque-activejob-datadog"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
