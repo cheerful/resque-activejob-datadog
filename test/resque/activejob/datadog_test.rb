@@ -7,7 +7,15 @@ class Resque::ActiveJob::DatadogTest < Minitest::Test
     refute_nil ::Resque::ActiveJob::Datadog::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  class TestJob < ActiveJob::Base
+    include Resque::ActiveJob::Datadog::BenchmarkStats
+
+    def perform(n:)
+      return n + 1
+    end
+  end
+
+  def test_perform_job
+    TestJob.perform_now(n: 1)
   end
 end
