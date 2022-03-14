@@ -12,7 +12,8 @@ module Resque
   module ActiveJob
     module Datadog
       class Error < StandardError; end
-      # Your code goes here...
+
+      require 'resque/activejob/datadog/railtie' if defined?(Rails)
     end
   end
 end
