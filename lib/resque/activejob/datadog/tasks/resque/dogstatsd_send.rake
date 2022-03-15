@@ -13,5 +13,7 @@ namespace :resque do
     Resque.queue_sizes.each do |queue, size|
       dogstatsd_client.gauge("resque.#{queue}.pending", size)
     end
+
+    dogstatsd_client.flush(sync: true)
   end
 end
